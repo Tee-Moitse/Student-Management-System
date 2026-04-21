@@ -23,9 +23,15 @@ student_database = [
 
 #Function to add the student on the student database
 
-def add_student(student_database):
-    # print(student_database)
-    pass
+def add_student(student):
+
+    new_student = student_database.append(student)
+    print(student_database)
+    return new_student
+
+
+add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
+
 
 #Function to search for the student
 def search_student(studen_database):
