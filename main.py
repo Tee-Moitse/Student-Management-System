@@ -40,9 +40,9 @@ def search_student(student_database):
     #print/return the student
     pass
 
-#Function to view the students for the database
+#View all the students in the database
 def view_student(student_database):
-    #be able to view all of the students in the database
+    #be able to view all the students in the database
     #in a clean and proper way, not with any code jargon, just in a proper list
 
     pass
