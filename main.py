@@ -26,26 +26,34 @@ student_database = [
 def add_student(student):
 
     new_student = student_database.append(student)
-    print(student_database)
+    # print(student_database)
     return new_student
 
 
-add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
+# add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
 
 
 #Function to search for the student
-def search_student(student_database):
+def search_student():
+    database = student_database
     #user input to enter the student being searched for
+    name = input("Enter the name of the student: ")
     #a for loop to go through the database for the student
-    #print/return the student
-    pass
+    for student in database:
+        if name == student in database:
+            return name
+    print(name)
+search_student()
+
+
+
 
 #View all the students in the database
-def view_student(student_database):
+# def view_student(student_database):
     #be able to view all the students in the database
     #in a clean and proper way, not with any code jargon, just in a proper list
 
-    pass
+    # pass
 
 
 
