@@ -40,10 +40,13 @@ def search_student():
     name = input("Enter the name of the student: ")
     #a for loop to go through the database for the student
     for student in database:
-        if name == student in database:
-            return name
-    print(name)
+        if name == student["name"]:
+            return student
+            print(name)
+
 search_student()
+
+
 
 
 
