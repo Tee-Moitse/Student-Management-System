@@ -41,8 +41,8 @@ def search_student():
     #a for loop to go through the database for the student
     for student in database:
         if name == student["name"]:
-            return student
-            print(name)
+            return student["name"]          #have to get the name/ student info to be printed
+            print(student["name"])
 
 search_student()
 
