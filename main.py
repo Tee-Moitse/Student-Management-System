@@ -41,10 +41,12 @@ def search_student():
     #a for loop to go through the database for the student
     for student in database:
         if name == student["name"]:
-            return student["name"]          #have to get the name/ student info to be printed
-            print(student["name"])
+            return student        #have to get the name/ student info to be printed
 
-# search_student()
+    return "Student not found!"
+
+outcome = search_student()
+print(outcome)
 
 
 
@@ -59,8 +61,8 @@ def view_student():
     for student in database:
         print(f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}")
 
-view_student()
-    # pass
+# view_student()
+
 
 
 
