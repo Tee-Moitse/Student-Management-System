@@ -30,7 +30,7 @@ def add_student(student):
     return new_student
 
 
-# add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
+add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
 
 
 #Function to search for the student
@@ -38,7 +38,7 @@ def search_student():
     database = student_database
     #user input to enter the student being searched for
     name = input("Enter the name of the student: ")
-    #a for loop to go through the database for the student
+
     for student in database:
         if name == student["name"]:
             return student        #have to get the name/ student info to be printed
@@ -49,19 +49,13 @@ outcome = search_student()
 print(outcome)
 
 
-
-
-
-
 #View all the students in the database
-def view_student():
-    #be able to view all the students in the database
-    #in a clean and proper way, not with any code jargon, just in a proper list
+def view_students():
     database = student_database
     for student in database:
         print(f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}")
 
-# view_student()
+view_students()
 
 
 
