@@ -59,6 +59,17 @@ view_students()
 
 
 
+# to update the students info if needed.
+def update_database():
+    pass
+
+
+# to delete the student from the database
+def delete_student():
+    pass
+
+
+
 
 
 
