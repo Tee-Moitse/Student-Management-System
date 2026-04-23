@@ -61,11 +61,18 @@ view_students()
 
 # to update the students info if needed.
 def update_database():
+    #go through the database
+    #choose which student to want to update info
+    #input to write what you want to update
+    #and then update the info and return the updated information
     pass
 
 
 # to delete the student from the database
 def delete_student():
+    #search for the name of the student
+    #delete the student or what ever info
+    #return the database without the deleted info
     pass
 
 
