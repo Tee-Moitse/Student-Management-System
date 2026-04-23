@@ -44,7 +44,7 @@ def search_student():
             return student["name"]          #have to get the name/ student info to be printed
             print(student["name"])
 
-search_student()
+# search_student()
 
 
 
@@ -52,10 +52,14 @@ search_student()
 
 
 #View all the students in the database
-# def view_student(student_database):
+def view_student():
     #be able to view all the students in the database
     #in a clean and proper way, not with any code jargon, just in a proper list
+    database = student_database
+    for student in database:
+        print(f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}")
 
+view_student()
     # pass
 
 
