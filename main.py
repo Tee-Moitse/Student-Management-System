@@ -18,7 +18,7 @@ student_database = [
     {"name": "Kyle", "age": 23, "course": "Civil Engineering", "marks": 52.2}, {"name": "Andile", "age": 28, "course": "Culinary", "marks": 86.3},
     {"name": "Palesa", "age": 25, "course": "Accounting", "marks": 46.5}, {"name": "Heather", "age": 19, "course": "Marketing", "marks": 60.3},
     {"name": "Owen", "age": 35, "course": "Mechanical Engineering", "marks": 49.6}, {"name": "Thabo", "age": 27, "course": "Agriculture", "marks": 66.8},
-    {"name": "John", "age": 31, "course": "Nursing", "marks": 71.0}, {"name": "Willow", "age": 29, "course": "Law", "marks": 76.5},
+    {"name": "John", "age": 31, "course": "Nursing", "marks": 71.0}, {"name": "Willow", "age": 29, "course": "Law", "marks": 76.5}
 ]
 
 #Function to add the student on the student database
@@ -37,7 +37,7 @@ add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
 def search_student():
     database = student_database
     #user input to enter the student being searched for
-    name = input("Enter the name of the student: ")
+    name = input("Student you are searching for: ")
 
     for student in database:
         if name == student["name"]:
