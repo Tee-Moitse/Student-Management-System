@@ -71,11 +71,11 @@ def update_database():
             if question == "marks":
                 marks = float(input("Enter the marks of the student that you want to update: "))
                 updation = student.update({"marks": marks})
-                print(updation)
+                print(student)
             elif question == "course":
                 course = input("Enter the updated course: ")
                 updated_course = student.update({"course": course})
-                print(updated_course)
+                print(student)
             else:
                 print(f"The student info is still the same: {student['name']}, {student['age']}, {student['course']}, {student['marks']} ")
         # else:
