@@ -82,18 +82,30 @@ def update_database():
         #     print("Name not found in database!")
     return "Name not found!"
 
-outcome = update_database()
-print(outcome)
+# outcome = update_database()
+# print(outcome)
 
 
 # to delete the student from the database
 def delete_student():
 
+    database = student_database
+
+    name = input("Enter the student's name of whom you want to delete: ")
+
+    for student in database:
+        if name == student['name']:
+            student.pop('name')
+            return student
+    return 'Student not found!⚠️'
+
+result = delete_student()
+print(result)
 
     #search for the name of the student
     #delete the student or what ever info
     #return the database without the deleted info
-    pass
+
 
 
 
