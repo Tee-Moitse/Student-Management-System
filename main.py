@@ -30,7 +30,7 @@ def add_student(student):
     return new_student
 
 
-add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
+# add_student({"name": "Kay", "age": 22, "course":"Culinary", "marks": 62.4})
 
 
 #Function to search for the student
@@ -45,8 +45,8 @@ def search_student():
 
     return "Student not found!"
 
-outcome = search_student()
-print(outcome)
+# outcome = search_student()
+# print(outcome)
 
 
 #View all the students in the database
@@ -55,7 +55,7 @@ def view_students():
     for student in database:
         print(f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}")
 
-view_students()
+# view_students()
 
 
 
@@ -68,17 +68,18 @@ def update_database():
     for student in database:
         if name == student["name"]:
             question = input("Choose what info you want to update of the student (marks/course, etc): ")
-            if question == student["marks"]:
-                marks = int(input("Enter the marks of the student that you want to update: "))
-                student.update({"marks": marks})
-                print(student)
-            elif question == student["course"]:
+            if question == "marks":
+                marks = float(input("Enter the marks of the student that you want to update: "))
+                updation = student.update({"marks": marks})
+                print(updation)
+            elif question == "course":
                 course = input("Enter the updated course: ")
-                student.update({"course": course})
+                updated_course = student.update({"course": course})
+                print(updated_course)
             else:
                 print(f"The student info is still the same: {student['name']}, {student['age']}, {student['course']}, {student['marks']} ")
-        else:
-            print("Name not found in database!")
+        # else:
+        #     print("Name not found in database!")
     return student
 
 outcome = update_database()
