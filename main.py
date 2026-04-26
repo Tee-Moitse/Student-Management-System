@@ -86,14 +86,10 @@ outcome = update_database()
 print(outcome)
 
 
-
-    #choose which student to want to update info
-    #input to write what you want to update
-    #and then update the info and return the updated information
-
-
 # to delete the student from the database
 def delete_student():
+
+
     #search for the name of the student
     #delete the student or what ever info
     #return the database without the deleted info
