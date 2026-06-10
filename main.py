@@ -55,7 +55,7 @@ def view_students():
     for student in database:
         print(f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}")
 
-# view_students()
+view_students()
 
 
 
@@ -89,22 +89,27 @@ def update_database():
 # to delete the student from the database
 def delete_student():
 
-    database = student_database
+    global student_database
 
     name = input("Enter the student's name of whom you want to delete: ")
 
-    for student in database:
-        if name == student['name']:
-            student.pop('name')
-            return student
-    return 'Student not found!⚠️'
+    first_length = len(student_database)
 
-result = delete_student()
-print(result)
+    student_database = [student for student in student_database if student.get('name') != name]
 
-    #search for the name of the student
-    #delete the student or what ever info
-    #return the database without the deleted info
+
+    if len(student_database) < first_length:
+        return f"Successfully deleted {name}!"
+
+    return "Student not found!⚠️"
+
+
+
+# result = delete_student()
+# print(result)
+
+
+
 
 
 
