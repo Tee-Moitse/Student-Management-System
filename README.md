@@ -8,7 +8,8 @@ The features of this project:
 - Add student
 - View student
 - Search student
-- (Future: update and delete)
+- Delete student
+- Update student
 
 # Tech Stack
 - Python
@@ -18,7 +19,6 @@ The features of this project:
 - Run file
 
 # Future improvements
-- Add update/delete
 - Add file storage
 - Add frontend
 - Add tests
