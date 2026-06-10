@@ -15,7 +15,6 @@ student_database = [
     {"name": "John", "age": 31, "course": "Nursing", "marks": 71.0}, {"name": "Willow", "age": 29, "course": "Law", "marks": 76.5}
 ]
 
-#Function to add the student on the student database
 
 def add_student(student):
 
