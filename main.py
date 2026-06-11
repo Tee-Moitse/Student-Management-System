@@ -28,11 +28,13 @@ def add_student(student):
 
 #Function to search for the student
 def search_student():
-    database = student_database
+    # database = student_database
     #user input to enter the student being searched for
+
+    global student_database
     name = input("Student you are searching for: ")
 
-    for student in database:
+    for student in student_database:
         if name == student["name"]:
             return student        #have to get the name/ student info to be printed
 
@@ -55,10 +57,10 @@ view_students()
 # to update the students info if needed.
 def update_database():
     #go through the database
-    database = student_database
+    global student_database
 
     name = input("Enter students name to change their info: ")
-    for student in database:
+    for student in student_database:
         if name == student["name"]:
             question = input("Choose what info you want to update of the student (marks/course, etc): ")
             if question == "marks":
