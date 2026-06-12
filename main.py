@@ -1,21 +1,21 @@
 from database import student_database
 
 
-student_database = [
-    {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}, {"name": "Lebo", "age": 22, "course": "Acturial Science", "marks": 82.3},
-    {"name": "Tom", "age": 24, "course": "Culinary", "marks": 65.5}, {"name": "Amogelang", "age": 23, "course": "Business Studies", "marks": 79.2},
-    {"name": "Sam", "age": 19, "course": "Civil Engineering", "marks": 83.8}, {"name": "Hannah", "age": 25, "course": "Psychology", "marks": 57.9},
-    {"name": "Kabelo", "age": 22, "course": "Mechanical Engineering", "marks": 67.9}, {"name": "Marina", "age": 24, "course": "Nursing", "marks": 70.9},
-    {"name": "Lincoln", "age": 21, "course": "Accounting", "marks": 65.5}, {"name": "Atlegang", "age": 28, "course": "Agriculture", "marks": 68.7},
-    {"name": "Joseph", "age": 29, "course": "Architecture", "marks": 55.8}, {"name": "Anna", "age": 22, "course": "Music", "marks": 56.8},
-    {"name": "Katlego", "age": 19, "course": "Marketing", "marks": 63.3}, {"name": "Holden", "age": 21, "course": "Law", "marks": 65.3},
-    {"name": "Bontle", "age": 22, "course": "Computer Science", "marks": 56.5}, {"name": "Kieth", "age":30, "course": "Mechanical Engineering", "marks": 80.5},
-    {"name": "Londiwe", "age": 27, "course": "Computer Science", "marks": 72.1}, {"name": "Peter", "age": 32, "course": "Architecture", "marks": 76.5},
-    {"name": "Kyle", "age": 23, "course": "Civil Engineering", "marks": 52.2}, {"name": "Andile", "age": 28, "course": "Culinary", "marks": 86.3},
-    {"name": "Palesa", "age": 25, "course": "Accounting", "marks": 46.5}, {"name": "Heather", "age": 19, "course": "Marketing", "marks": 60.3},
-    {"name": "Owen", "age": 35, "course": "Mechanical Engineering", "marks": 49.6}, {"name": "Thabo", "age": 27, "course": "Agriculture", "marks": 66.8},
-    {"name": "John", "age": 31, "course": "Nursing", "marks": 71.0}, {"name": "Willow", "age": 29, "course": "Law", "marks": 76.5}
-]
+# student_database = [
+#     {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}, {"name": "Lebo", "age": 22, "course": "Acturial Science", "marks": 82.3},
+#     {"name": "Tom", "age": 24, "course": "Culinary", "marks": 65.5}, {"name": "Amogelang", "age": 23, "course": "Business Studies", "marks": 79.2},
+#     {"name": "Sam", "age": 19, "course": "Civil Engineering", "marks": 83.8}, {"name": "Hannah", "age": 25, "course": "Psychology", "marks": 57.9},
+#     {"name": "Kabelo", "age": 22, "course": "Mechanical Engineering", "marks": 67.9}, {"name": "Marina", "age": 24, "course": "Nursing", "marks": 70.9},
+#     {"name": "Lincoln", "age": 21, "course": "Accounting", "marks": 65.5}, {"name": "Atlegang", "age": 28, "course": "Agriculture", "marks": 68.7},
+#     {"name": "Joseph", "age": 29, "course": "Architecture", "marks": 55.8}, {"name": "Anna", "age": 22, "course": "Music", "marks": 56.8},
+#     {"name": "Katlego", "age": 19, "course": "Marketing", "marks": 63.3}, {"name": "Holden", "age": 21, "course": "Law", "marks": 65.3},
+#     {"name": "Bontle", "age": 22, "course": "Computer Science", "marks": 56.5}, {"name": "Kieth", "age":30, "course": "Mechanical Engineering", "marks": 80.5},
+#     {"name": "Londiwe", "age": 27, "course": "Computer Science", "marks": 72.1}, {"name": "Peter", "age": 32, "course": "Architecture", "marks": 76.5},
+#     {"name": "Kyle", "age": 23, "course": "Civil Engineering", "marks": 52.2}, {"name": "Andile", "age": 28, "course": "Culinary", "marks": 86.3},
+#     {"name": "Palesa", "age": 25, "course": "Accounting", "marks": 46.5}, {"name": "Heather", "age": 19, "course": "Marketing", "marks": 60.3},
+#     {"name": "Owen", "age": 35, "course": "Mechanical Engineering", "marks": 49.6}, {"name": "Thabo", "age": 27, "course": "Agriculture", "marks": 66.8},
+#     {"name": "John", "age": 31, "course": "Nursing", "marks": 71.0}, {"name": "Willow", "age": 29, "course": "Law", "marks": 76.5}
+# ]
 
 
 def add_student(student):
@@ -31,10 +31,10 @@ def add_student(student):
 #Function to search for the student
 def search_student():
 
-    global student_database
+    database = student_database
     name = input("Student you are searching for: ")
 
-    for student in student_database:
+    for student in database:
         if name == student["name"]:
             return student        #have to get the name/ student info to be printed
 
@@ -57,10 +57,10 @@ view_students()
 # to update the students info if needed.
 def update_database():
     #go through the database
-    global student_database
+    database = student_database
 
     name = input("Enter students name to change their info: ")
-    for student in student_database:
+    for student in database:
         if name == student["name"]:
             question = input("Choose what info you want to update of the student (marks/course, etc): ")
             if question == "marks":
@@ -84,16 +84,16 @@ def update_database():
 # to delete the student from the database
 def delete_student():
 
-    global student_database
+    database = student_database
 
     name = input("Enter the student's name of whom you want to delete: ")
 
-    first_length = len(student_database)
+    first_length = len(database)
 
-    student_database = [student for student in student_database if student.get('name') != name]
+    student_d = [student for student in database if student.get('name') != name]
 
 
-    if len(student_database) < first_length:
+    if len(student_d) < first_length:
         return f"Successfully deleted {name}!"
 
     return "Student not found!⚠️"
