@@ -1,3 +1,5 @@
+from database import student_database
+
 
 student_database = [
     {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}, {"name": "Lebo", "age": 22, "course": "Acturial Science", "marks": 82.3},
@@ -28,8 +30,6 @@ def add_student(student):
 
 #Function to search for the student
 def search_student():
-    # database = student_database
-    #user input to enter the student being searched for
 
     global student_database
     name = input("Student you are searching for: ")
