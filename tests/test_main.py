@@ -28,9 +28,9 @@ class TestStudentSystem(unittest.TestCase):
     
     
     def test_view_students(self):
-        view_data = self.database
-        self.assertEqual(view_data, "Name: Lisa, Age: 26, Course: 76.5")
-        pass
+        view_data = view_students(self.database)
+        self.assertEqual(view_data, "Name: Lisa, Age: 26, Course: Law , Marks: 76.5\nName: Tom, Age: 24, Course: Culinary , Marks: 65.5\nName: Sam, Age: 19, Course: Civil Engineering , Marks: 83.8")
+        
     
     def test_update_database(self):
         pass
