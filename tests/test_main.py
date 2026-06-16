@@ -33,7 +33,9 @@ class TestStudentSystem(unittest.TestCase):
         
     
     def test_update_database(self):
-        pass
+        student_update = update_database(self.database)
+        self.assertEqual(student_update)
+        
     
     def test_delete_student(self):
         pass
