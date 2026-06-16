@@ -21,7 +21,11 @@ class TestStudentSystem(unittest.TestCase):
     def test_search_student(self):
         outcome = search_student(self.database, "Lisa")
         self.assertEqual(outcome["name"], "Lisa")
-        
+    
+    def test_search_student_not_found(self):
+        outcome = search_student(self.database, "Lisa")
+        self.assertEqual(outcome["name"], "Lisa")
+    
     
     def test_view_students(self):
         pass
