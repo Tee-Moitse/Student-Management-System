@@ -2,7 +2,7 @@
 #unit testing for the functions using setup for the database
 #and that the different test cases dont affect database in each function test.
 
-from tests import test_main
+
 import main
 import unittest
 
@@ -17,7 +17,10 @@ class TestStudentSystem(unittest.TestCase):
         ]
     
     def test_add_student(self):
-        pass
+        new_student = {"name": "Kay", "age": 22, "course": "Culinary", "marks": 62.4}
+        add_student(self.database, new_student)
+        self.assertIn(new_student, self.database)
+        
     
     def test_search_student(self):
         pass
