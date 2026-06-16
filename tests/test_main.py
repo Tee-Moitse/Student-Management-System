@@ -28,6 +28,8 @@ class TestStudentSystem(unittest.TestCase):
     
     
     def test_view_students(self):
+        view_data = self.database
+        self.assertEqual(view_data, "Name: Lisa, Age: 26, Course: 76.5")
         pass
     
     def test_update_database(self):

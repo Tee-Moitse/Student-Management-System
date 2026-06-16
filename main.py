@@ -31,7 +31,7 @@ def search_student():
 def view_students():
     database = student_database
     for student in database:
-        print(f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}")
+        return f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}"
 
 view_students()
 
