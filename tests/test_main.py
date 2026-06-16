@@ -1,9 +1,6 @@
-#creating tests for the functions
-#unit testing for the functions using setup for the database
-#and that the different test cases dont affect database in each function test.
-
-from main import *
 import unittest
+from main import *
+
 
 class TestStudentSystem(unittest.TestCase):
     
@@ -22,7 +19,9 @@ class TestStudentSystem(unittest.TestCase):
         
     
     def test_search_student(self):
-        pass
+        outcome = search_student(self.database, "Lisa")
+        self.assertEqual(outcome["name"], "Lisa")
+        
     
     def test_view_students(self):
         pass
