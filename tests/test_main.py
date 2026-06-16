@@ -33,8 +33,9 @@ class TestStudentSystem(unittest.TestCase):
         
     
     def test_update_database(self):
-        student_update = update_database(self.database)
-        self.assertEqual(student_update)
+        new_info = {"name": "Tom", "age": 24, "course": "Agriculture", "marks": 70.1},
+        student_update = update_database(self.database, new_info)
+        self.assertEqual(student_update, self.database)
         
     
     def test_delete_student(self):
