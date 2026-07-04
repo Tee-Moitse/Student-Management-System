@@ -56,8 +56,7 @@ def update_database():
                 return student
             else:
                 print(f"The student info is still the same: {student['name']}, {student['age']}, {student['course']}, {student['marks']} ")
-        # else:
-        #     print("Name not found in database!")
+
     return "Name not found!"
 
 # outcome = update_database()
@@ -79,7 +78,7 @@ def delete_student():
     if len(student_d) < first_length:
         return f"Successfully deleted {name}!"
 
-    return "Student not found!⚠️"
+    return "Student not found!"
 
 
 
