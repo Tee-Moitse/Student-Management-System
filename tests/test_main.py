@@ -39,6 +39,9 @@ class TestStudentSystem(unittest.TestCase):
         
     
     def test_delete_student(self):
+        student = {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}
+        student_update = delete_student(self.database, student)
+        self.assertEqual(student_update, student)
         pass
     
     
