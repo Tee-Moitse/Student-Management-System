@@ -38,26 +38,12 @@ def view_students(database):
 
 
 # to update the students info if needed.
-def update_database():
-    #go through the database
-    database = student_database
+def update_database(database, name, update):
 
-    name = input("Enter students name to change their info: ")
     for student in database:
-        if name == student["name"]:
-            question = input("Choose what info you want to update of the student (marks/course, etc): ")
-            if question == "marks":
-                marks = float(input("Enter the marks of the student that you want to update: "))
-                updation = student.update({"marks": marks})
-                return student
-            elif question == "course":
-                course = input("Enter the updated course: ")
-                updated_course = student.update({"course": course})
-                return student
-            else:
-                print(f"The student info is still the same: {student['name']}, {student['age']}, {student['course']}, {student['marks']} ")
-
-    return "Name not found!"
+        if student["name"] == name:
+            student.update(update)
+    return None
 
 # outcome = update_database()
 # print(outcome)
