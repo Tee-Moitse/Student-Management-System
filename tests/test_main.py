@@ -22,6 +22,7 @@ class TestStudentSystem(unittest.TestCase):
         outcome = search_student(self.database, "Lisa")
         self.assertEqual(outcome["name"], "Lisa")
     
+    
     def test_search_student_not_found(self):
         outcome = search_student(self.database, "Lisa")
         self.assertEqual(outcome["name"], "Lisa")
@@ -54,8 +55,6 @@ class TestStudentSystem(unittest.TestCase):
         self.assertEqual(len(self.database), 3)
         
         
-        
-    
     def test_delete_student(self):
         original_len = len(self.database)
         deleted = delete_student(self.database, "Lisa")
@@ -63,11 +62,7 @@ class TestStudentSystem(unittest.TestCase):
         self.assertEqual(deleted["name"], "Lisa")
         self.assertEqual(len(self.database), original_len - 1)
         self.assertIsNone(search_student(self.database, "Lisa"))
-        # student = {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}
-        # student_update = delete_student(self.database, student)
-        # self.assertEqual(student_update, student)
-        
-        
+
         
     def test_delete_student_not_found(self):
         original_len = len(self.database)
