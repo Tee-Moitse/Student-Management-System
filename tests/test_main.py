@@ -42,7 +42,7 @@ class TestStudentSystem(unittest.TestCase):
         student = {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}
         student_update = delete_student(self.database, student)
         self.assertEqual(student_update, student)
-        pass
+        
     
     
 if __name__ == "__main__":
