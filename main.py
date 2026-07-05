@@ -24,12 +24,16 @@ def search_student(database, name):
 
 
 #View all the students in the database
-def view_students():
-    database = student_database
-    for student in database:
-        return f"Name: {student['name']}, Age: {student.get('age')}, Course: {student.get('course')}, Marks: {student.get('marks')}"
+def view_students(database):
+    lines = []
 
-view_students()
+    for student in database:
+        lines.append(
+            f"Name: {student['name']}, Age: {student.get('age')}, "
+            f"Course: {student.get('course')}, Marks: {student.get('marks')}"
+        )
+        
+    return "\n".join(lines)
 
 
 
