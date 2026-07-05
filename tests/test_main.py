@@ -39,9 +39,9 @@ class TestStudentSystem(unittest.TestCase):
             self.assertEqual(line, expected_line)
         
     
-    def test_update_database(self):
+    def test_update_student_info(self):
         new_info = {"name": "Tom", "age": 24, "course": "Agriculture", "marks": 70.1}
-        student_update = update_database(self.database, new_info)
+        student_update = update_student_info(self.database, new_info)
         self.assertEqual(student_update, new_info)
         
     

@@ -38,7 +38,7 @@ def view_students(database):
 
 
 # to update the students info if needed.
-def update_database(database, name, update):
+def update_student_info(database, name, update):
 
     for student in database:
         if student["name"] == name:
