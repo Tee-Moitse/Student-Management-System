@@ -61,7 +61,14 @@ class TestStudentSystem(unittest.TestCase):
         student_update = delete_student(self.database, student)
         self.assertEqual(student_update, student)
         
-    
+        
+        
+    def test_delete_student_not_found(self):
+        original_len = len(self.database)
+        deleted = delete_student(self.database, "Not found!")
+        self.assertIsNone(deleted)
+        self.assertEqual(len(self.database), original_len)
+            
     
 if __name__ == "__main__":
     unittest.main()
