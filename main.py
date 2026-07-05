@@ -51,21 +51,14 @@ def update_student_info(database, name, update):
 
 
 # to delete the student from the database
-def delete_student():
+def delete_student(database, name):
 
-    database = student_database
+    for student in database:
+        if student["name"] == name:
+            database.remove(student)
+            return student
 
-    name = input("Enter the student's name of whom you want to delete: ")
-
-    first_length = len(database)
-
-    student_d = [student for student in database if student.get('name') != name]
-
-
-    if len(student_d) < first_length:
-        return f"Successfully deleted {name}!"
-
-    return "Student not found!"
+    return None
 
 
 
