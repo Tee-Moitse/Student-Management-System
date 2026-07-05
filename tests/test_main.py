@@ -46,6 +46,14 @@ class TestStudentSystem(unittest.TestCase):
         self.assertEqual(update_student_info["marks"], 70.1)
         self.assertEqual(len(self.database), 3)
         
+        
+    def test_update_student_info_not_found(self):
+        result = update_database(self.database, "Ghost", {"course": "History"})
+        self.assertIsNone(result)
+        self.assertEqual(len(self.database), 3)
+        
+        
+        
     
     def test_delete_student(self):
         student = {"name": "Lisa", "age": 26, "course": "Law", "marks": 76.5}
