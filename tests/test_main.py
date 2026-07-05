@@ -29,7 +29,14 @@ class TestStudentSystem(unittest.TestCase):
     
     def test_view_students(self):
         view_data = view_students(self.database)
-        self.assertEqual(view_data, "Name: Lisa, Age: 26, Course: Law , Marks: 76.5\nName: Tom, Age: 24, Course: Culinary , Marks: 65.5\nName: Sam, Age: 19, Course: Civil Engineering , Marks: 83.8")
+        lines = view_data.split("\n")
+        self.assertEqual(len(lines), len(self.database))
+        for student, line in zip(self.database, lines):
+            expected_line = (
+                f"Name: {student['name']}, Age: {student['age']}, "
+                f"Course: {student['course']}, Marks: {student['marks']}"
+            )
+            self.assertEqual(line, expected_line)
         
     
     def test_update_database(self):
