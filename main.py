@@ -1,9 +1,9 @@
 from database import student_database
 
 
-def add_student(student):
+def add_student(database, student):
 
-    new_student = student_database.append(student)
+    new_student = database.append(student)
     # print(student_database)
     return new_student
 
