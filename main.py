@@ -4,7 +4,6 @@ from database import student_database
 def add_student(database, student):
 
     new_student = database.append(student)
-    # print(student_database)
     return new_student
 
 
@@ -12,16 +11,13 @@ def add_student(database, student):
 
 
 #Function to search for the student
-def search_student():
-
-    database = student_database
-    name = input("Student you are searching for: ")
+def search_student(database, name):
 
     for student in database:
         if name == student["name"]:
             return student        #have to get the name/ student info to be printed
 
-    return "Student not found!"
+    return None
 
 # outcome = search_student()
 # print(outcome)
