@@ -43,6 +43,7 @@ def update_student_info(database, name, update):
     for student in database:
         if student["name"] == name:
             student.update(update)
+            return student
     return None
 
 # outcome = update_database()

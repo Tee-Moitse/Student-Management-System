@@ -40,15 +40,16 @@ class TestStudentSystem(unittest.TestCase):
         
     
     def test_update_student_info(self):
-        new_info = update_student_info(self.database, "Tom", {"course": "Agriculture", "marks": 70.1})
-        self.assertIsNotNone(update_student_info)
-        self.assertEqual(update_student_info["course"], "Agriculture")
-        self.assertEqual(update_student_info["marks"], 70.1)
-        self.assertEqual(len(self.database), 3)
+        original_len = len(self.database)
+        update = update_student_info(self.database, "Tom", {"course": "Agriculture", "marks": 70.1})
+        self.assertIsNotNone(update)
+        self.assertEqual(update["course"], "Agriculture")
+        self.assertEqual(update["marks"], 70.1)
+        self.assertEqual(len(self.database), original_len)
         
         
     def test_update_student_info_not_found(self):
-        result = update_database(self.database, "Ghost", {"course": "History"})
+        result = update_student_info(self.database, "Ghost", {"course": "History"})
         self.assertIsNone(result)
         self.assertEqual(len(self.database), 3)
         
