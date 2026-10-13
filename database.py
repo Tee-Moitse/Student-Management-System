@@ -13,3 +13,11 @@ student_database = [
     {"name": "Owen", "age": 35, "course": "Mechanical Engineering", "marks": 49.6}, {"name": "Thabo", "age": 27, "course": "Agriculture", "marks": 66.8},
     {"name": "John", "age": 31, "course": "Nursing", "marks": 71.0}, {"name": "Willow", "age": 29, "course": "Law", "marks": 76.5}
 ]
+
+# The database should contain the details of the students
+# It would also contain their classes, attendance and also overall marks in their modules.
+# API to be implemented to retrieve the data.
+# Create a server to keep the application going as this will be a CLI application.
+# Implementing SQL for the database and also using Docker to containerise the data that is being made in the project.
+
+
